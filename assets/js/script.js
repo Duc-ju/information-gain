@@ -1,6 +1,6 @@
 function entropy(a,b,c){
 	let sum = a+b+c
-	return -(a/sum*Math.log2(a)+b/sum*Math.log2(b)+c/sum*Math.log2(c))
+	return -(a/sum*Math.log2(a/sum)+b/sum*Math.log2(b/sum)+c/sum*Math.log2(c/sum))
 }
 document.getElementById('tinh').onclick = () => {
 	let tot = document.getElementById('tot').value;
