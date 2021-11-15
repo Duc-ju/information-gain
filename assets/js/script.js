@@ -7,4 +7,5 @@ document.getElementById('tinh').onclick = () => {
 	let kha = document.getElementById('kha').value;
 	let kem = document.getElementById('kem').value;
 	document.getElementById('ketqua').innerHTML = entropy(Number(tot), Number(kha), Number(kem))
+	document.getElementById('soluong').innerHTML = Number(tot)+Number(kha)+Number(kem);
 }
