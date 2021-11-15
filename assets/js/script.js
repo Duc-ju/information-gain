@@ -1,5 +1,8 @@
 function entropy(a,b,c){
 	let sum = a+b+c
+	if(a==0) return -(b/sum*Math.log2(b/sum)+c/sum*Math.log2(c/sum))
+	if(b==0) return -(a/sum*Math.log2(a/sum)+c/sum*Math.log2(c/sum))
+	if(c==0) return -(a/sum*Math.log2(a/sum)+b/sum*Math.log2(b/sum))
 	return -(a/sum*Math.log2(a/sum)+b/sum*Math.log2(b/sum)+c/sum*Math.log2(c/sum))
 }
 document.getElementById('tinh').onclick = () => {
