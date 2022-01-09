@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Information Gain</title>
+	<title>Tính entropy</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <!-- jQuery library -->
@@ -19,31 +19,87 @@
 </head>
 
 <body>
-	<div class="jumbotron">
-		<h1 class="text-center mb-4">Tính entropy</h1>
-		<div class="form-group">
-			
-			<label for="partner_company">Nhãn tốt:</label>
-			<input type="text" class="form-control"
-				placeholder="" id="tot"
-				name="partner_company">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="jumbotron">
+				<h1 class="text-center mb-4">Tính entropy</h1>
+				<div class="form-group">
+					
+					<label for="partner_company">Nhãn tốt:</label>
+					<input type="number" class="form-control"
+						placeholder="" id="tot"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">Nhãn khá:</label>
+					<input type="number" class="form-control"
+						placeholder="" id="kha"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">Nhãn kém:</label>
+					<input type="number" class="form-control"
+						placeholder="" id="kem"
+						name="partner_company">
+				</div>
+				<button id="tinh" class="btn btn-success btn-block">Tính</button>
+				<div class="m-4">Kết quả là: <span id="ketqua"></span> </div>
+				<div class="m-4">Số lượng: <span id="soluong"></span></div>
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="partner_company">Nhãn khá:</label>
-			<input type="text" class="form-control"
-				placeholder="" id="kha"
-				name="partner_company">
+		<div class="col-sm-6">
+			<div class="jumbotron">
+				<h1 class="text-center mb-4">Tính IG</h1>
+				<div class="form-group">
+					
+					<label for="partner_company">H:</label>
+					<input type="number" class="form-control"
+						placeholder="" id="h"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">H(i1):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="i1"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">Số lượng của H(i1):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="ni1"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">H(i2):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="i2"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">Số lượng của H(i2):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="ni2"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">H(i3):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="i3"
+						name="partner_company">
+				</div>
+				<div class="form-group">
+					<label for="partner_company">Số lượng của H(i3):</label>
+					<input type="number" class="form-control"
+						placeholder="" id="ni3"
+						name="partner_company">
+				</div>
+				<button id="tinhIG" class="btn btn-success btn-block">Tính</button>
+				<div class="m-4">Kết quả là IG=: <span id="ig"></span> </div>
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="partner_company">Nhãn kém:</label>
-			<input type="text" class="form-control"
-				placeholder="" id="kem"
-				name="partner_company">
-		</div>
-		<button id="tinh" class="btn btn-success btn-block">Tính</button>
-		<div class="m-4">Kết quả là: <span id="ketqua"></span> </div>
-		<div class="m-4">Số lượng: <span id="soluong"></span></div>
 	</div>
+	
+	
 	<script src="./assets/js/script.js"></script>
 </body>
 
